@@ -1,0 +1,115 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Potta+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hanalei&display=swap');
+
+body, html {
+    background: linear-gradient(rgb(119, 141, 155), rgb(160, 184, 140));
+    background-size: fill;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100%;
+    width: 100%;
+}
+
+#game {
+    margin: 0 auto;
+    transition: all 1s ease-in-out
+
+}
+#snake {
+    width: 275px;
+    height: 275px;
+}
+#canvas {
+    margin-right: auto;
+    margin-left: auto;
+
+}
+#snake {
+    margin: 0;
+    padding: 0;
+}
+
+#intro {
+    font-family: 'Potta One';
+    font-size: 1.4em;
+    height: 255px;
+    width: 255px;
+    background-color: rgba(20,20,20,.3);
+    padding: .7em;
+    color: white;
+    line-height: 1.2em;
+    letter-spacing: 0.05em;
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    text-align: center;
+    margin-left: 2em;
+    display: flex;
+    flex-direction: column!important;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#startscreen {
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    transition: all 1.3s ease-in-out
+}
+
+ #startscreen div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+} 
+
+.hidden {
+    display: none;
+}
+
+button {
+    color: rgb(83, 70, 44);
+    background: rgb(224, 125, 59);
+    cursor: pointer;
+    outline: none;
+    border: none;
+    padding: 1em;
+    width: 230px;
+    font-size: 1.5em;
+    margin: 3em 0;
+    border-radius: 5px;
+    font-family: 'Potta One';
+    transition: all .5s ease-in-out
+}
+
+button:hover {
+    background-color: white;
+}
+
+h1 {
+    padding: 0 2em;
+    font-size: 4.5em;
+    letter-spacing: .15em;
+    font-family: 'Hanalei';
+    color: rgb(53, 58, 71);
+    text-shadow: 2px 2px 8px #508888;
+    text-align: center
+}
+
+span {
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.fade {
+    opacity: 0
+}

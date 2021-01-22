@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div id="wrapper">
+    <h1>Snake Snacks</h1>
+    <section id="startscreen">
+        <div>
+            <img id="snake" src="./images/snake (1).png" height="400">
+            
+            <section id="intro"><p>Move the snake with ↑ → ↓ ←.  </p><p>Try to catch a snack while avoiding becoming one! </p></section>
+        </div>
+        <button id="start">Start game</button>
+    </section>
+
+    <section class="hidden fade" id="game" >
+     
+        <canvas id="canvas" width="1100" height="600"></canvas>
+    </section>
+  
+    <section id="end"></section>
+
+
+</div>
+    <script src="js/classes.js"></script>
+    <script src="js/index.js"></script>
+
+        
+
+</body>
+</html>
