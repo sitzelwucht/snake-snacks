@@ -1,13 +1,4 @@
 
-const snake = new Snake(20, 350, 3, 0)
-const gorilla = new Obstacle([{ x: 80, y: 20}], 2, 300)
-const sloth = new Obstacle([{ x: 100, y: 200}], 1, 75)
-const parrot = new Obstacle([{ x: 300, y: 100}], 2.5, 125)
-const narwhal = new Obstacle([{ x: 600, y: 400}], 1, 50)
-
-const apple = new FoodItem([{ x: 900, y: 400}], 1, 300)
-const blueberry = new FoodItem([{ x: 900, y: 400}], 3, 100)
-
 document.querySelector('#start').addEventListener('click', () => {
     transitionScreen()
     startGame()
@@ -54,7 +45,7 @@ function draw() {
     parrotFunction()
     narwhalFunction()
 } 
- 
+// Generate and draw items 
 function appleFunction() {
     for (let i = 0; i < apple.coords.length; i++) {
         apple.drawFood(appleImg, apple.coords[i].x, apple.coords[i].y)

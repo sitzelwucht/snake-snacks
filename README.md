@@ -1,33 +1,46 @@
-# SNAKE SNACKS
+# SNAKE SNACKS Game
 
 ## Description
 
-The player controls a snake which has the goal of avoiding enemy creatures and try to eat snacks which the player is flying amongst. Player has 3 lives, and if he or she hits an enemy, a life is deducted. For each snack a point os awarded. The goal is to get as many points as possible before the life count goes to 0.
+In this game, the player controls a snake character using the 4 arrow keys. The goal is to avoid the appearing enemy creatures and eat snacks, which the player is flying amongst. Player has 3 lives, and upon colliding with an enemy, healthpoint(s) will be deducted depending on the enemy. Correspondingly, for each snack points are awarded depending on the snack. The objective is to get as many points as possible before the health count goes down to 0.
+When this occurs, the game ends and a game over screen is shown with 2 different options to proceed.
 
 ## MPV
 
-Basic functionality including one type of enemy items and food items.
+Basic functionality including: one type of enemy items and food items, possibility to score points and lose game.
 
 ## Backlog
 
-1. Different types of enemies that move faster or cause different amounts of damage
-2. Different types of food items that restore varying number of health points
+~~- Different types of enemies that move faster or cause different amounts of damage~~
+~~- Different types of food items that restore varying number of health points~~
+- Add option to enter your name and save score to leaderboard and save it to localstorage
 
 ## Data Sructure
 
-Classes:
-- Player
-- Snack
-- Obstacle/Enemy
+#### Classes:
+1. Player
+methods: 
+- ```drawSnake()```
+- ```checkStatus()```
+
+2. Food
+methods:
+- ```drawFood()```
+- ```generateFood()```
+- ```foodCollision()```
+
+3. Obstacle
+methods:
+- ```drawObstacle()```
+- ```generateObstacle()```
+- ```collision()```
+
 
 ## States & Transitions
 
 - Intro screen
 - Game screen
 - End screen
-
-## Tasks
-
 
 
 

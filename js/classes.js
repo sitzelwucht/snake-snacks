@@ -19,13 +19,14 @@ class Snake {
 }
 
 class Obstacle {
-    constructor(coords, speed, frequency) {
+    constructor(coords, speed, frequency, damage) {
         this.coords = [{
             x: 600,
             y: 600
         }],
         this.speed = speed
-        this.frequency = frequency 
+        this.frequency = frequency,
+        this.damage = damage
     }
     
     drawObstacle(img, x, y) {
@@ -36,7 +37,7 @@ class Obstacle {
         for (let i = 0; i < this.coords.length; i++) {
             this.coords[i].x = this.coords[i].x - this.speed
             if (this.coords[i].x == this.frequency) {
-                this.coords.push({x: canvas.width + 30, y: -Math.floor(Math.random() * 300) + 300}) 
+                this.coords.push({x: canvas.width + 30, y: randomInt(20, 550)})  
                 }
             if (this.coords[i].x < 0) {
                 this.coords.splice(i, 1)
@@ -50,7 +51,7 @@ class Obstacle {
             if (item.x < snake.x + 50  && item.x > snake.x && item.y + 50 > snake.y && item.y < snake.y + 50) {
                 if (!snake.collided) {
                     snake.collided = true;
-                    snake.health--
+                    snake.health = snake.health - this.damage
                 }
             }
         })
