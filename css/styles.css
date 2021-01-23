@@ -11,28 +11,43 @@ html {
     min-height: 100%;
     max-width: 100%;
 }
-
-#game {
-    margin: 0 auto;
-    transition: all 1s ease-in-out
-
+h1 {
+    padding: 0 2em;
+    font-size: 4.5em;
+    letter-spacing: .15em;
+    font-family: 'Hanalei';
+    color: rgb(53, 58, 71);
+    text-shadow: 2px 2px 8px #508888;
+    text-align: center
 }
+
+span {
+    font-weight: bold;
+    font-size: 2em;
+}
+#wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#startscreen {
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    transition: all 1.3s ease-in-out
+}
+#startscreen div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+} 
 
 #snake {
     width: 275px;
     height: 275px;
-}
-
-#canvas {
-    margin-right: auto;
-    margin-left: auto;
-}
-
-#snake {
     margin: 0;
     padding: 0;
 }
-
 #intro {
     font-family: 'Potta One';
     font-size: 1.4em;
@@ -53,26 +68,17 @@ html {
     justify-content: center;
 
 }
-
-#wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-#startscreen {
-    margin-right: auto;
-    margin-left: auto;
-    text-align: center;
+#game {
+    margin: 0 auto;
     transition: all 1.3s ease-in-out
 }
-
- #startscreen div {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-} 
-
+#canvas {
+    margin-right: auto;
+    margin-left: auto;
+}
+#end {
+    transition: all 1.4s ease-in
+}
 #game-over {
     font-family: 'Potta One';
     font-size: 1.4em;
@@ -91,26 +97,23 @@ html {
     align-items: center;
     justify-content: center;
 }
-
 #game-over > div {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 0;
     width: 80%;
+    transition: all 1.4s ease-in-out
 }
-
 #final-score {
     font-size: 2em;
 }
-
 #game-over button {
     font-size: .8em;
     padding: .4em;
     width: 150px;
     margin: .5em 0;
 }
-
 button {
     color: rgb(83, 70, 44);
     background: rgb(224, 125, 59);
@@ -125,25 +128,10 @@ button {
     font-family: 'Potta One';
     transition: all .5s ease-in-out
 }
-
 button:hover {
     background-color: white;
 }
 
-h1 {
-    padding: 0 2em;
-    font-size: 4.5em;
-    letter-spacing: .15em;
-    font-family: 'Hanalei';
-    color: rgb(53, 58, 71);
-    text-shadow: 2px 2px 8px #508888;
-    text-align: center
-}
-
-span {
-    font-weight: bold;
-    font-size: 2em;
-}
 
 .hidden {
     display: none;
