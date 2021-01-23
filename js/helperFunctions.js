@@ -36,7 +36,6 @@ function handleKeypress() {
     })
 }
 
-
 // Fade from screen to another
 function transitionScreen() {
     document.querySelector('#startscreen').classList.add('fade')
@@ -51,7 +50,6 @@ function transitionScreen() {
     }, 1100)
 }
 
-
 function endScreen() {
     document.querySelector('#game').classList.add('fade')
     setTimeout(() => {
@@ -60,7 +58,6 @@ function endScreen() {
 
     setTimeout(() => {
         document.querySelector('#end').classList.remove('hidden')
-       
     }, 1200);
     document.querySelector('#end').classList.remove('fade')
 }

@@ -15,15 +15,18 @@ bgImg.src = './images/battleback1.png'
 let healthImg = new Image()
 healthImg.src = './images/heart.png'
 let snakeImg = new Image()
-snakeImg.src = './images/snake_1.png'
+snakeImg.src = './images/snake.png'
 let slothImg = new Image()
-slothImg.src = './images/sloth_1.png'
+slothImg.src = './images/sloth.png'
 let gorillaImg = new Image()
-gorillaImg.src = './images/gorilla_1.png'
+gorillaImg.src = './images/gorilla.png'
 let parrotImg = new Image()
-parrotImg.src = './images/parrot_1.png'
+parrotImg.src = './images/parrot.png'
+let narwhalImg = new Image()
+narwhalImg.src = './images/narwhal.png'
+
 
 let appleImg = new Image()
-appleImg.src = './images/apple1.png'
+appleImg.src = './images/apple.png'
 let blueberryImg = new Image()
 blueberryImg.src = './images/blueberry.png'

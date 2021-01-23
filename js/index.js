@@ -1,7 +1,12 @@
 
 const snake = new Snake(20, 350, 3, 0)
-const gorilla = new Obstacle([{ x: 80, y: 20}])
-const apple = new FoodItem([{ x: 900, y: 400}])
+const gorilla = new Obstacle([{ x: 80, y: 20}], 2, 300)
+const sloth = new Obstacle([{ x: 100, y: 200}], 1, 75)
+const parrot = new Obstacle([{ x: 300, y: 100}], 2.5, 125)
+const narwhal = new Obstacle([{ x: 600, y: 400}], 1, 50)
+
+const apple = new FoodItem([{ x: 900, y: 400}], 1, 300)
+const blueberry = new FoodItem([{ x: 900, y: 400}], 3, 100)
 
 document.querySelector('#start').addEventListener('click', () => {
     transitionScreen()
@@ -42,45 +47,63 @@ function draw() {
 
     snake.drawSnake(snake.x, snake.y)
     snake.checkStatus()
-    drawGorilla()
-    drawApple()
-}
-
-
-function drawApple() {
+    appleFunction()
+    gorillaFunction()
+    blueberryFunction()
+    slothFunction()
+    parrotFunction()
+    narwhalFunction()
+} 
+ 
+function appleFunction() {
     for (let i = 0; i < apple.coords.length; i++) {
         apple.drawFood(appleImg, apple.coords[i].x, apple.coords[i].y)
-        apple.collision()
-        apple.coords[i].x--
-
-        if (apple.coords[i].x == 175) {
-            apple.coords.push({x: canvas.width + 30, y: -Math.floor(Math.random() * 300) + 325})
-        }
-        if (apple.coords[i].x <= 0) {
-            apple.coords.splice(i, 1)
-        }
+        apple.generateFood()
+        apple.foodCollision() 
     }
 }
 
-function drawGorilla() {
+function blueberryFunction() {
+    for (let i = 0; i < blueberry.coords.length; i++) {
+        blueberry.drawFood(blueberryImg, blueberry.coords[i].x, blueberry.coords[i].y)
+        blueberry.foodCollision()
+        blueberry.generateFood()
+    }
+}
+
+function gorillaFunction() {
     for (let i = 0; i < gorilla.coords.length; i++) {
-        gorilla.drawObstacle(gorillaImg, gorilla.coords[i].x, gorilla.coords[i].y)
+        gorilla.drawObstacle(gorillaImg, gorilla.coords[i].x, gorilla.coords[i].y) 
         gorilla.collision()
-        gorilla.coords[i].x--
-
-        if (gorilla.coords[i].x == 300) {
-            gorilla.coords.push({x: canvas.width + 30, y: -Math.floor(Math.random() * 300) + 300}) 
-            }
-        if (gorilla.coords[i].x <= 0) {
-            gorilla.coords.splice(i, 1)
-            snake.collided = false
-
-        }
+        gorilla.generateObstacle()
     }
-    
 }
 
+function slothFunction() {
+    for (let i = 0; i < sloth.coords.length; i++) {
+        sloth.drawObstacle(slothImg, sloth.coords[i].x, sloth.coords[i].y)
+        sloth.collision()
+        sloth.generateObstacle()
+    }
 
+}
+
+function parrotFunction() {
+    for (let i = 0; i < parrot.coords.length; i++) {
+        parrot.drawObstacle(parrotImg, parrot.coords[i].x, parrot.coords[i].y)
+        parrot.collision()
+        parrot.generateObstacle()
+    }
+}
+
+function narwhalFunction() {
+    for (let i = 0; i < narwhal.coords.length; i++) {
+        narwhal.drawObstacle(narwhalImg, narwhal.coords[i].x, narwhal.coords[i].y)
+        narwhal.collision()
+        narwhal.generateObstacle()
+    }
+
+}
 
 function startGame() { 
     handleKeypress()
