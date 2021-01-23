@@ -23,14 +23,25 @@
         <canvas id="canvas" width="1100" height="600"></canvas>
     </section>
   
-    <section id="end"></section>
-
+    <section id="end" class="hidden fade">
+        <div id="game-over">
+            <p>GAME OVER</p>
+            <p>Score:</p>
+            <p id="final-score">333</p>
+            <div>
+                <p><button id="replay">Play Again</button></p>
+                <p>
+                <button id="exit" onclick="location.href='https://en.wikipedia.org/wiki/Special:Random';">Bye</button>
+                </p>
+            </div>
+            
+        </div>
+    </section>
 
 </div>
+    <script src="js/variables.js"></script>
     <script src="js/classes.js"></script>
+    <script src="js/helperFunctions.js"></script>
     <script src="js/index.js"></script>
-
-        
-
 </body>
 </html>

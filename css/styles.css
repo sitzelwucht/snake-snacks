@@ -3,13 +3,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Hanalei&display=swap');
 
-body, html {
+html {
     background: linear-gradient(rgb(119, 141, 155), rgb(160, 184, 140));
     background-size: fill;
     background-repeat: no-repeat;
     background-position: center center;
-    height: 100%;
-    width: 100%;
+    min-height: 100%;
+    max-width: 100%;
 }
 
 #game {
@@ -17,15 +17,17 @@ body, html {
     transition: all 1s ease-in-out
 
 }
+
 #snake {
     width: 275px;
     height: 275px;
 }
+
 #canvas {
     margin-right: auto;
     margin-left: auto;
-
 }
+
 #snake {
     margin: 0;
     padding: 0;
@@ -69,11 +71,44 @@ body, html {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    
 } 
 
-.hidden {
-    display: none;
+#game-over {
+    font-family: 'Potta One';
+    font-size: 1.4em;
+    width: 455px;
+    background-color: rgba(20,20,20,.3);
+    padding: .7em;
+    color: white;
+    line-height: 1.2em;
+    letter-spacing: 0.05em;
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    text-align: center;
+    margin: auto;
+    display: flex;
+    flex-direction: column!important;
+    align-items: center;
+    justify-content: center;
+}
+
+#game-over > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0;
+    width: 80%;
+}
+
+#final-score {
+    font-size: 2em;
+}
+
+#game-over button {
+    font-size: .8em;
+    padding: .4em;
+    width: 150px;
+    margin: .5em 0;
 }
 
 button {
@@ -108,6 +143,10 @@ h1 {
 span {
     font-weight: bold;
     font-size: 2em;
+}
+
+.hidden {
+    display: none;
 }
 
 .fade {
