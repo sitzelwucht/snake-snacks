@@ -27,14 +27,15 @@ function draw() {
 
     // render health symbols
     for(let i = 0; i < snake.health; i++) {
-        ctx.drawImage(healthImg, 900 + i * 50, 550) 
+        ctx.drawImage(healthImg, 900 + i * 35, 550) 
     }
-    // draw and move snake
     snake.drawSnake(snake.x, snake.y)
-    // snake.checkStatus() 
     snake.checkStatus()
-    // generate and render items
-    drawAllObstacles() 
+    drawAllObstacles()
+
+    if (pause) {
+        pauseGame()
+    }
 }
 
 // Loop through all items and run their methods
@@ -62,6 +63,17 @@ function drawAllObstacles() {
 
 function startGame() { 
     handleKeypress()
+        intervalID = setInterval(() => {
+            requestAnimationFrame(draw)
+        }, 10)
+}
+
+function pauseGame() {
+    clearInterval(intervalID)
+    gamePaused = true
+}
+
+function resumeGame() {
     intervalID = setInterval(() => {
         requestAnimationFrame(draw)
     }, 10)
@@ -79,13 +91,13 @@ function clearGame() {
     snake.x = 10
     snake.y = 350
     gorilla.coords = [{ x: 180, y: 120 }]
-    apple.coords = [{ x: 750, y: 390 }]
-    blueberry.coords = [{ x: 900, y: 400 }]
     parrot.coords = [{ x: 300, y: 100 }]
     narwhal.coords = [{ x: 550, y: 400 }]
     dog.coords = [{ x: 700, y: 400 }]
     sloth.coords = [{ x: 100, y: 200 }]
     monkey.coords = [{ x: 780, y: 150 }]
+    apple.coords = [{ x: 750, y: 390 }]
+    blueberry.coords = [{ x: 900, y: 400 }]
     ctx.clearRect(0, 0, canvas.width, canvas.height)
     document.querySelector('#end').classList.add('hidden') 
 }

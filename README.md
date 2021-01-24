@@ -1,6 +1,6 @@
 # SNAKE SNACKS GAME
 
-![start](https://user-images.githubusercontent.com/61108220/105633264-d7c35300-5e57-11eb-85ef-48e5ad117293.png)
+![start](https://user-images.githubusercontent.com/61108220/105637228-a0ab6c80-5e6c-11eb-9f66-788ab815f0f3.png)
 
 ## Description
 
@@ -25,7 +25,7 @@ Basic functionality including: one type of enemy items and food items, possibili
 - ~~Different types of food items that restore varying number of health points~~
 - Add option to enter your name and save score to leaderboard and save it to localstorage
 - Add boss enemy when a certain score is reached during the game
-- Add pause option
+- ~~Add pause option~~
 
 ## Data Sructure
 

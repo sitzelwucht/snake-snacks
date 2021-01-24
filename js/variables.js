@@ -10,7 +10,9 @@ let isDown = false
 let isUp = false
 let isRight = false
 let isLeft = false
-let intervalId = 0
+let pause = false
+let intervalID = 0
+let gamePaused = false
 
 let bgImg = new Image()
 bgImg.src = './images/battleback1.png'

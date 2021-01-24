@@ -25,8 +25,6 @@ class Snake {
             this.x++
         }
         ctx.drawImage(snakeImg, x, y)
-        console.log('y' + snake.y)
-        console.log('x' + snake.x)
     }
 
     dropSnake() {

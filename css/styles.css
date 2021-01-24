@@ -21,6 +21,9 @@ h1 {
     margin: .2em 0;
     padding: .3em
 }
+span {
+    color: rgb(161, 205, 235)
+}
 #wrapper {
     display: flex;
     flex-direction: column;

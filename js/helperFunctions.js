@@ -30,6 +30,12 @@ function handleKeypress() {
             isUp = false
             isDown = true
         }
+        else if (event.keyCode == 32 || event.key == 'Space') {
+            pause == false ? pause = true : pause = false
+            if (!pause && gamePaused) {
+                resumeGame()
+            }
+        }
     })
     
     document.addEventListener('keyup', (event) => {
@@ -61,7 +67,6 @@ function toggleInfo() {
 // Fade from screen to another
 function transitionScreen() {
     startScreen.classList.add('fade')
-    
     setTimeout(() => {
         startScreen.classList.add('hidden')
     }, 1000)
