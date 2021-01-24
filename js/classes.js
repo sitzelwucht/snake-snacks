@@ -24,20 +24,20 @@ class Snake {
         }
 
         ctx.drawImage(snakeImg, x, y)
-       
     }
 
-    drop() {
-        setInterval(() => {
+    dropSnake() {
+       dropInterval = setInterval(() => {
             this.y++
-        }, 500) 
+        }, 200) 
         if (this.y > canvas.height + 50) {
             gameOver()
         }
     }
+
     checkStatus() {
         if (this.health <= 0) {
-            this.drop()
+            this.dropSnake()
         }
     }
 }

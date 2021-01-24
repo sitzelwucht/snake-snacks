@@ -11,13 +11,15 @@ html {
     max-width: 100%;
 }
 h1 {
-    padding: 0 2em;
+    padding: 0em 2em;
     font-size: 5em;
     letter-spacing: .15em;
     font-family: 'Hanalei';
     color: rgb(59, 72, 80);
     text-shadow: 2px 2px 8px rgb(160, 184, 140);
-    text-align: center
+    text-align: center;
+    margin: .2em 0;
+    padding: .3em
 }
 #wrapper {
     display: flex;
@@ -37,16 +39,18 @@ h1 {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    margin-top: 0!important;
+    padding-top: 0;
 } 
 #snake {
-    width: 325px;
-    height: 325px;
+    width: 350px;
+    height: 350px;
     margin: .5em;
     padding: 0;
 }
 #obstacles {
-    height: 285px;
-    width: 285px;
+    height: 310px;
+    width: 310px;
     border-radius: 100%;
     text-align: center;
     display: flex;
@@ -54,31 +58,36 @@ h1 {
     align-items: center;
     justify-content: center;
     margin: .5em;
-}
-.blur {
-    font-family: 'Potta One';
-    font-size: 1.4em;
-    background-color: rgba(20,20,20,.2);
-    padding: .7em;
-    color: white;
-    line-height: 1.2em;
-    letter-spacing: 0.05em;
-    backdrop-filter: blur(10px);
-    border-radius: 17px;
-    text-align: center;
+    transition: all .7s ease-in-out
 }
 #obstacles p {
     margin: 0;
     padding: .3em;
 }
-#intro{
+#obstacles img {
+    opacity: .8;
+}
+#obstacles img:hover {
+    opacity: 1;
+}
+#intro {
     display: flex;
     flex-direction: column!important;
     max-width: 100%;
     margin: 0 .6em;
+    transition: all .8s ease-in-out;
+}
+#info {
+    width: 30px;
+    filter: invert(100%) sepia(6%) saturate(7500%) hue-rotate(170deg) brightness(110%) contrast(104%);
+    margin: .6em;
+    cursor: pointer;
+}
+#intro p {
+    padding: .3em
 }
 #intro p, img {
-    margin: .25em
+    margin: .25em;
 }
 #game {
     margin: 0 auto;
@@ -134,8 +143,20 @@ button {
 button:hover {
     background-color: white;
 }
+.blur {
+    font-family: 'Potta One';
+    font-size: 1.4em;
+    background-color: rgba(20,20,20,.2);
+    padding: .7em;
+    color: white;
+    line-height: 1.2em;
+    letter-spacing: 0.05em;
+    backdrop-filter: blur(10px);
+    border-radius: 17px;
+    text-align: center;
+}
 .hidden {
-    display: none;
+    display: none!important;
 }
 .fade {
     opacity: 0

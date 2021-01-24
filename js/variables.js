@@ -1,5 +1,11 @@
 let canvas = document.querySelector('#canvas')
 let ctx = canvas.getContext('2d')
+let intro = document.querySelector('#intro')
+let iBtn = document.querySelector('#info')
+let startScreen = document.querySelector('#startscreen')
+let game = document.querySelector('#game')
+let end = document.querySelector('#end')
+
 let isDown = false
 let isUp = false
 let isRight = false
@@ -30,4 +36,3 @@ let appleImg = new Image()
 appleImg.src = './images/apple.png'
 let blueberryImg = new Image()
 blueberryImg.src = './images/blueberry.png'
-

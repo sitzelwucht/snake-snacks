@@ -1,3 +1,9 @@
+window.onload = () => {
+    intro.classList.add('hidden')
+    iBtn.addEventListener('click', () => {
+        toggleInfo()
+    })
+}
 
 document.querySelector('#start').addEventListener('click', () => {
     transitionScreen()
@@ -28,12 +34,11 @@ function draw() {
     // snake.checkStatus() 
     snake.checkStatus()
     // generate and render items
-    drawAllItems() 
-    monkeyFunction()
+    drawAllObstacles() 
 }
 
 // Loop through all items and run their methods
-function drawAllItems() {
+function drawAllObstacles() {
     for (let i = 0; i < obstacleArr.length; i++) {
         for (let j = 0; j < obstacleArr[i].coords.length; j++) {
             obstacleArr[i].drawObstacle(obstacleArr[i].img, obstacleArr[i].coords[j].x, obstacleArr[i].coords[j].y)
@@ -48,10 +53,7 @@ function drawAllItems() {
            foodArr[i].generateFood()
        }
    }
-}
-
-function monkeyFunction() {
-    for (let i = 0; i < monkey.coords.length; i++) {
+   for (let i = 0; i < monkey.coords.length; i++) {
         monkey.drawMonkey(monkey.coords[i].x, monkey.coords[i].y)
         monkey.monkeyCollision()
         monkey.generateMonkey()
@@ -76,13 +78,14 @@ function clearGame() {
     snake.points = 0
     snake.x = 20
     snake.y = 350
-    gorilla.coords = [{ x: 180, y: 120}]
-    apple.coords = [{ x: 750, y: 390}]
-    blueberry.coords = [{ x: 900, y: 400}]
-    parrot.coords = [{ x: 300, y: 100}]
-    narwhal.coords = [{ x: 550, y: 400}]
-    dog.coords = [{ x: 700, y: 400}]
-    sloth.coords = [{ x: 100, y: 200}]
+    gorilla.coords = [{ x: 180, y: 120 }]
+    apple.coords = [{ x: 750, y: 390 }]
+    blueberry.coords = [{ x: 900, y: 400 }]
+    parrot.coords = [{ x: 300, y: 100 }]
+    narwhal.coords = [{ x: 550, y: 400 }]
+    dog.coords = [{ x: 700, y: 400 }]
+    sloth.coords = [{ x: 100, y: 200 }]
+    monkey.coords = [{ x: 780, y: 150 }]
     ctx.clearRect(0, 0, canvas.width, canvas.height)
     document.querySelector('#end').classList.add('hidden')
 }

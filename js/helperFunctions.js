@@ -1,5 +1,4 @@
 
-
 function randomInt(min, max) { 
     return Math.floor(Math.random() * (max - min + 1) + min);
   }
@@ -41,30 +40,48 @@ function handleKeypress() {
     })
 }
 
+// show/hide start screen info
+function toggleInfo() {
+    if (intro.classList.contains('hidden')) {
+        intro.classList.remove('hidden')
+        setTimeout(() => {
+            intro.classList.remove('fade')
+        }, 5);
+        iBtn.src = './images/cancel.svg'
+    }
+    else { 
+        iBtn.src = './images/info.svg' 
+        intro.classList.add('fade')
+        setTimeout(() => {
+            intro.classList.add('hidden')
+        }, 600);
+    }
+}
+
 // Fade from screen to another
 function transitionScreen() {
-    document.querySelector('#startscreen').classList.add('fade')
+    startScreen.classList.add('fade')
     
     setTimeout(() => {
-        document.querySelector('#startscreen').classList.add('hidden')
+        startScreen.classList.add('hidden')
     }, 1000)
 
-    document.querySelector('#game').classList.remove('hidden')
+    game.classList.remove('hidden')
     setTimeout(() => {
-        document.querySelector('#game').classList.remove('fade')
+        game.classList.remove('fade')
     }, 1100)
 }
 
 function endScreen() {
-    document.querySelector('#game').classList.add('fade')
+    game.classList.add('fade')
     setTimeout(() => {
-        document.querySelector('#game').classList.add('hidden')
+        game.classList.add('hidden')
     }, 800);
 
     setTimeout(() => {
-        document.querySelector('#end').classList.remove('hidden')
+        end.classList.remove('hidden')
     }, 1200);
-    document.querySelector('#end').classList.remove('fade')
+    end.classList.remove('fade')
 }
 
 
