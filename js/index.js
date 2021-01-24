@@ -21,13 +21,15 @@ function draw() {
 
     // render health symbols
     for(let i = 0; i < snake.health; i++) {
-        ctx.drawImage(healthImg, 900 + i * 50, 550)
+        ctx.drawImage(healthImg, 900 + i * 50, 550) 
     }
     // draw and move snake
     snake.drawSnake(snake.x, snake.y)
+    // snake.checkStatus() 
     snake.checkStatus()
     // generate and render items
-    drawAllItems()
+    drawAllItems() 
+    monkeyFunction()
 }
 
 // Loop through all items and run their methods
@@ -46,6 +48,14 @@ function drawAllItems() {
            foodArr[i].generateFood()
        }
    }
+}
+
+function monkeyFunction() {
+    for (let i = 0; i < monkey.coords.length; i++) {
+        monkey.drawMonkey(monkey.coords[i].x, monkey.coords[i].y)
+        monkey.monkeyCollision()
+        monkey.generateMonkey()
+    }
 }
 
 function startGame() { 
