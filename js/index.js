@@ -1,5 +1,6 @@
 window.onload = () => {
     intro.classList.add('hidden')
+    handleKeypress()
     iBtn.addEventListener('click', () => {
         toggleInfo()
     })
@@ -32,10 +33,6 @@ function draw() {
     snake.drawSnake(snake.x, snake.y)
     snake.checkStatus()
     drawAllObstacles()
-
-    if (pause) {
-        pauseGame()
-    }
 }
 
 // Loop through all items and run their methods
@@ -62,21 +59,9 @@ function drawAllObstacles() {
 }
 
 function startGame() { 
-    handleKeypress()
         intervalID = setInterval(() => {
             requestAnimationFrame(draw)
         }, 10)
-}
-
-function pauseGame() {
-    clearInterval(intervalID)
-    gamePaused = true
-}
-
-function resumeGame() {
-    intervalID = setInterval(() => {
-        requestAnimationFrame(draw)
-    }, 10)
 }
 
 function gameOver() {

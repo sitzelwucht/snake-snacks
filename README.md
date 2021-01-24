@@ -1,6 +1,6 @@
 # SNAKE SNACKS GAME
 
-![start](https://user-images.githubusercontent.com/61108220/105637228-a0ab6c80-5e6c-11eb-9f66-788ab815f0f3.png)
+![startscreen](https://user-images.githubusercontent.com/61108220/105641659-8cc03480-5e85-11eb-83f5-2d1f8ae63ca4.png)
 
 ## Description
 
@@ -8,12 +8,12 @@ The goal of this game is to avoid the various appearing enemy creatures and grab
 
 #### How to play ####
 
-The player controls a snake character using the 4 arrow keys of the keyboard. Player initially has 3 lives, and upon colliding with an obstacle, 1-3 healthpoint(s) will be deducted depending on the obstacle (the obstacle type **monkey** can cause any one of 4 random events to happen to the player: reduce or add health, reduce or add points).
+The player controls a snake character using the 4 arrow keys of the keyboard. Pressing space pauses/resumes the game. Player initially has 3 lives, and upon colliding with an obstacle, 1-3 healthpoint(s) will be deducted depending on the obstacle (the obstacle type **monkey** can cause any one of 4 random events to happen to the player: reduce or add health, reduce or add points).
 
 Correspondingly, for each snack, points are awarded depending on the snack. The objective is to get as many points as possible before the health count goes down to 0.
 When this occurs, the game ends and a gameover screen is shown with 2 different options to proceed.
 
-![gamescreen](https://user-images.githubusercontent.com/61108220/105615434-e74b8900-5dd0-11eb-95d3-fe447e9809fd.png)
+![gamescreen](https://user-images.githubusercontent.com/61108220/105641666-99dd2380-5e85-11eb-8598-5c6991d86bc0.png)
 
 ## MPV
 

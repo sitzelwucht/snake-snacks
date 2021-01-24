@@ -32,8 +32,13 @@ function handleKeypress() {
         }
         else if (event.keyCode == 32 || event.key == 'Space') {
             pause == false ? pause = true : pause = false
-            if (!pause && gamePaused) {
-                resumeGame()
+            if (pause) {
+                clearInterval(intervalID)
+            }
+            else {
+                intervalID = setInterval(() => {
+                    requestAnimationFrame(draw)
+                }, 10)
             }
         }
     })
@@ -73,6 +78,7 @@ function transitionScreen() {
 
     game.classList.remove('hidden')
     setTimeout(() => {
+        document.querySelector('h1').classList.add('shrink')
         game.classList.remove('fade')
     }, 1100)
 }

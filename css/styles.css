@@ -19,7 +19,21 @@ h1 {
     text-shadow: 2px 2px 8px rgb(160, 184, 140);
     text-align: center;
     margin: .2em 0;
-    padding: .3em
+    padding: .3em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition: all .8s ease-in-out;
+}
+h1 img {
+    margin: 0 1.4em;
+}
+#apple {
+    transform: rotate(20deg);
+}
+#blueb {
+    transform: rotate(-20deg);
 }
 span {
     color: rgb(161, 205, 235)
@@ -163,4 +177,7 @@ button:hover {
 }
 .fade {
     opacity: 0
+}
+.shrink {
+    transform: scale(.8);
 }

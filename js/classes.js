@@ -28,7 +28,7 @@ class Snake {
     }
 
     dropSnake() {
-        this.y = this.y + 3
+        this.y = this.y + 4
         if (this.y > canvas.height + 50) {
             gameOver()
         }
