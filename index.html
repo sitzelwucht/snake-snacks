@@ -13,18 +13,23 @@
         <div>
             <img id="snake" src="./images/snake (1).png" height="400">
             
-            <section id="intro"><p>Move the snake with ↑ → ↓ ←.  </p><p>Try to catch a snack while avoiding becoming one! </p></section>
+            <section id="obstacles" class="blur">
+                <p><img src="./images/parrot.png" height="45"><img src="./images/sloth.png" height="45"><img src="./images/equal.png" height=""> <img src="./images/warning.png" height="40"></p>
+                <p><img src="./images/gorilla.png" height="45"><img src="./images/dog.png" height="45"><img src="./images/equal.png"><img src="./images/danger.png" height="40"></p>
+                <p><img src="./images/narwhal.png" height="45"><img src="./images/equal.png"><img src="./images/extreme.png" height="40"></p>
+        </section>
+        </div>
+        <div id="intro" class="blur"><p>Move the snake with<p><img src="./images/keyboard.png"></p><p>Try to catch a snack while avoiding becoming one! </p>
         </div>
         <button id="start">Start game</button>
     </section>
 
     <section class="fade hidden" id="game" >
-     
         <canvas id="canvas" width="1100" height="600"></canvas>
     </section>
   
     <section id="end" class="fade hidden">
-        <div id="game-over">
+        <div id="game-over" class="blur">
             <p>GAME OVER</p>
             <p>Score:</p>
             <p id="final-score"></p>
@@ -39,9 +44,9 @@
     </section>
 
 </div>
-    <script src="js/classes.js"></script>
     <script src="js/variables.js"></script>
     <script src="js/helperFunctions.js"></script>
+    <script src="js/classes.js"></script>
     <script src="js/index.js"></script>
 </body>
 </html>

@@ -19,81 +19,33 @@ function draw() {
     ctx.fillText('Score: '+ snake.points, 35, 580)
     ctx.fillText('Health:', 780, 580)
 
+    // render health symbols
     for(let i = 0; i < snake.health; i++) {
         ctx.drawImage(healthImg, 900 + i * 50, 550)
     }
-
-    if (isDown && (snake.y < canvas.height - 60)) {
-        snake.y += 3
-    }
-    if (isUp && (snake.y > 0)) {
-        snake.y -= 3
-    }
-    if (isLeft && (snake.x > 0)) {
-        snake.x -= 3
-    }
-    if (isRight && (snake.x < canvas.width - 60)) {
-        snake.x += 3
-    }
-
+    // draw and move snake
     snake.drawSnake(snake.x, snake.y)
     snake.checkStatus()
-    appleFunction()
-    gorillaFunction()
-    blueberryFunction()
-    slothFunction()
-    parrotFunction()
-    narwhalFunction()
-} 
-// Generate and draw items 
-function appleFunction() {
-    for (let i = 0; i < apple.coords.length; i++) {
-        apple.drawFood(appleImg, apple.coords[i].x, apple.coords[i].y)
-        apple.generateFood()
-        apple.foodCollision() 
-    }
+    // generate and render items
+    drawAllItems()
 }
 
-function blueberryFunction() {
-    for (let i = 0; i < blueberry.coords.length; i++) {
-        blueberry.drawFood(blueberryImg, blueberry.coords[i].x, blueberry.coords[i].y)
-        blueberry.foodCollision()
-        blueberry.generateFood()
-    }
-}
-
-function gorillaFunction() {
-    for (let i = 0; i < gorilla.coords.length; i++) {
-        gorilla.drawObstacle(gorillaImg, gorilla.coords[i].x, gorilla.coords[i].y) 
-        gorilla.collision()
-        gorilla.generateObstacle()
-    }
-}
-
-function slothFunction() {
-    for (let i = 0; i < sloth.coords.length; i++) {
-        sloth.drawObstacle(slothImg, sloth.coords[i].x, sloth.coords[i].y)
-        sloth.collision()
-        sloth.generateObstacle()
-    }
-
-}
-
-function parrotFunction() {
-    for (let i = 0; i < parrot.coords.length; i++) {
-        parrot.drawObstacle(parrotImg, parrot.coords[i].x, parrot.coords[i].y)
-        parrot.collision()
-        parrot.generateObstacle()
-    }
-}
-
-function narwhalFunction() {
-    for (let i = 0; i < narwhal.coords.length; i++) {
-        narwhal.drawObstacle(narwhalImg, narwhal.coords[i].x, narwhal.coords[i].y)
-        narwhal.collision()
-        narwhal.generateObstacle()
-    }
-
+// Loop through all items and run their methods
+function drawAllItems() {
+    for (let i = 0; i < obstacleArr.length; i++) {
+        for (let j = 0; j < obstacleArr[i].coords.length; j++) {
+            obstacleArr[i].drawObstacle(obstacleArr[i].img, obstacleArr[i].coords[j].x, obstacleArr[i].coords[j].y)
+            obstacleArr[i].collision()
+            obstacleArr[i].generateObstacle() 
+        }
+    } 
+   for (let i = 0; i < foodArr.length; i++) {
+       for(let j = 0; j < foodArr[i].coords.length; j++) {
+           foodArr[i].drawFood(foodArr[i].img, foodArr[i].coords[j].x, foodArr[i].coords[j].y)
+           foodArr[i].foodCollision()
+           foodArr[i].generateFood()
+       }
+   }
 }
 
 function startGame() { 
@@ -114,8 +66,13 @@ function clearGame() {
     snake.points = 0
     snake.x = 20
     snake.y = 350
-    gorilla.coords = [{ x: 80, y: 20}]
-    apple.coords = [{ x: 900, y: 400}]
+    gorilla.coords = [{ x: 180, y: 120}]
+    apple.coords = [{ x: 750, y: 390}]
+    blueberry.coords = [{ x: 900, y: 400}]
+    parrot.coords = [{ x: 300, y: 100}]
+    narwhal.coords = [{ x: 550, y: 400}]
+    dog.coords = [{ x: 700, y: 400}]
+    sloth.coords = [{ x: 100, y: 200}]
     ctx.clearRect(0, 0, canvas.width, canvas.height)
     document.querySelector('#end').classList.add('hidden')
 }

@@ -1,10 +1,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Potta+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Hanalei&display=swap');
 
 html {
-    background: linear-gradient(rgb(119, 141, 155), rgb(160, 184, 140));
+    background: linear-gradient(rgb(92, 109, 119), rgb(160, 184, 140));
     background-size: fill;
     background-repeat: no-repeat;
     background-position: center center;
@@ -13,17 +12,12 @@ html {
 }
 h1 {
     padding: 0 2em;
-    font-size: 4.5em;
+    font-size: 5em;
     letter-spacing: .15em;
     font-family: 'Hanalei';
-    color: rgb(53, 58, 71);
-    text-shadow: 2px 2px 8px #508888;
+    color: rgb(59, 72, 80);
+    text-shadow: 2px 2px 8px rgb(160, 184, 140);
     text-align: center
-}
-
-span {
-    font-weight: bold;
-    font-size: 2em;
 }
 #wrapper {
     display: flex;
@@ -34,39 +28,57 @@ span {
     margin-right: auto;
     margin-left: auto;
     text-align: center;
-    transition: all 1.3s ease-in-out
+    transition: all 1.3s ease-in-out;
 }
-#startscreen div {
+#startscreen > * {
+    margin: .8em;
+}
+#startscreen > div {
     display: flex;
     flex-direction: row;
     justify-content: center;
 } 
-
 #snake {
-    width: 275px;
-    height: 275px;
-    margin: 0;
+    width: 300px;
+    height: 300px;
+    margin: .5em;
     padding: 0;
 }
-#intro {
-    font-family: 'Potta One';
-    font-size: 1.4em;
+#obstacles {
     height: 255px;
     width: 255px;
-    background-color: rgba(20,20,20,.3);
+    border-radius: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column!important;
+    align-items: center;
+    justify-content: center;
+    margin: .5em;
+}
+.blur {
+    font-family: 'Potta One';
+    font-size: 1.4em;
+    background-color: rgba(20,20,20,.2);
     padding: .7em;
     color: white;
     line-height: 1.2em;
     letter-spacing: 0.05em;
     backdrop-filter: blur(10px);
-    border-radius: 20px;
+    border-radius: 17px;
     text-align: center;
-    margin-left: 2em;
+}
+#obstacles p {
+    margin: 0;
+    padding: .3em;
+}
+#intro{
     display: flex;
     flex-direction: column!important;
-    align-items: center;
-    justify-content: center;
-
+    max-width: 100%;
+    margin: 0 .6em;
+}
+#intro p, img {
+    margin: .25em
 }
 #game {
     margin: 0 auto;
@@ -80,17 +92,7 @@ span {
     transition: all 1.4s ease-in
 }
 #game-over {
-    font-family: 'Potta One';
-    font-size: 1.4em;
     width: 455px;
-    background-color: rgba(20,20,20,.3);
-    padding: .7em;
-    color: white;
-    line-height: 1.2em;
-    letter-spacing: 0.05em;
-    backdrop-filter: blur(10px);
-    border-radius: 20px;
-    text-align: center;
     margin: auto;
     display: flex;
     flex-direction: column!important;
@@ -123,20 +125,18 @@ button {
     padding: 1em;
     width: 230px;
     font-size: 1.5em;
-    margin: 3em 0;
-    border-radius: 5px;
+    margin: 1.6em 0;
+    border-radius: 7px;
     font-family: 'Potta One';
-    transition: all .5s ease-in-out
+    transition: all .5s ease-in-out;
+    box-shadow: -7px 10px 16px -5px rgba(0,0,0,0.35);
 }
 button:hover {
     background-color: white;
 }
-
-
 .hidden {
     display: none;
 }
-
 .fade {
     opacity: 0
 }
