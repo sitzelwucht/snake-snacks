@@ -25,6 +25,7 @@ Basic functionality including: one type of enemy items and food items, possibili
 - ~~Different types of food items that restore varying number of health points~~
 - Add option to enter your name and save score to leaderboard and save it to localstorage
 - Add boss enemy when a certain score is reached during the game
+- Add pause option
 
 ## Data Sructure
 

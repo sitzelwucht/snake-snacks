@@ -9,7 +9,6 @@ class Snake {
     }
 
     drawSnake(x, y) {
-        this.x++
         if (isDown && (this.y < canvas.height - 60)) {
             this.y += 3
         }
@@ -22,14 +21,16 @@ class Snake {
         if (isRight && (this.x < canvas.width - 60)) {
             this.x += 3
         }
-
+        if(this.x < canvas.width - 60) {
+            this.x++
+        }
         ctx.drawImage(snakeImg, x, y)
+        console.log('y' + snake.y)
+        console.log('x' + snake.x)
     }
 
     dropSnake() {
-       dropInterval = setInterval(() => {
-            this.y++
-        }, 200) 
+        this.y = this.y + 3
         if (this.y > canvas.height + 50) {
             gameOver()
         }

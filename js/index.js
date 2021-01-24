@@ -76,7 +76,7 @@ function gameOver() {
 function clearGame() {
     snake.health = 3
     snake.points = 0
-    snake.x = 20
+    snake.x = 10
     snake.y = 350
     gorilla.coords = [{ x: 180, y: 120 }]
     apple.coords = [{ x: 750, y: 390 }]
@@ -87,5 +87,5 @@ function clearGame() {
     sloth.coords = [{ x: 100, y: 200 }]
     monkey.coords = [{ x: 780, y: 150 }]
     ctx.clearRect(0, 0, canvas.width, canvas.height)
-    document.querySelector('#end').classList.add('hidden')
+    document.querySelector('#end').classList.add('hidden') 
 }

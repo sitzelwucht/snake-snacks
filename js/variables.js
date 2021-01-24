@@ -11,7 +11,6 @@ let isUp = false
 let isRight = false
 let isLeft = false
 let intervalId = 0
-let dropInterval = 0
 
 let bgImg = new Image()
 bgImg.src = './images/battleback1.png'
