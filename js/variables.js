@@ -5,6 +5,7 @@ let iBtn = document.querySelector('#info')
 let startScreen = document.querySelector('#startscreen')
 let game = document.querySelector('#game')
 let end = document.querySelector('#end')
+let score = document.querySelector('#final-score')
 
 let isDown = false
 let isUp = false

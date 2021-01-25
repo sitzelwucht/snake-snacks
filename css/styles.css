@@ -135,6 +135,7 @@ span {
 }
 #final-score {
     font-size: 2em;
+    color: rgb(153, 224, 125)
 }
 #game-over button {
     font-size: .8em;
@@ -179,5 +180,5 @@ button:hover {
     opacity: 0
 }
 .shrink {
-    transform: scale(.8);
+    transform: scale(.6);
 }

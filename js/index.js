@@ -33,6 +33,15 @@ function draw() {
     snake.drawSnake(snake.x, snake.y)
     snake.checkStatus()
     drawAllObstacles()
+
+    if (pause) {
+        ctx.font = '60px monospace'
+        ctx.fillStyle = 'white'
+        ctx.fillText('P A U S E D', (canvas.width / 2) - 200, canvas.height / 2)
+        ctx.font = '30px monospace'
+        ctx.fillStyle = 'white'
+        ctx.fillText('press space to resume', (canvas.width / 2) - 190, (canvas.height / 2) + 75)
+    }
 }
 
 // Loop through all items and run their methods
@@ -66,7 +75,13 @@ function startGame() {
 
 function gameOver() {
     clearInterval(intervalID)
-    document.querySelector('#final-score').innerHTML = snake.points
+    if(snake.points < 0) {
+         score.style.color = 'rgb(127, 179, 214)'
+    }
+    else {
+        score.style.color = 'rgb(153, 224, 125)'
+    }
+    score.innerHTML = snake.points
     endScreen()
 }
 
