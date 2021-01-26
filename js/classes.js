@@ -155,7 +155,7 @@ class FoodItem {
             if (this.coords[i].x == this.frequency) {
                 this.coords.push({x: canvas.width + 30, y: randomInt(20, 550)}) 
                 }
-            if (this.coords[i].x < -20) {
+            if (this.coords[i].x < -50) {
                 this.coords.splice(i, 1)
                 snake.collided = false
             }
@@ -182,8 +182,7 @@ const dog = new Obstacle([{ x: 700, y: 400}], 2, 150, 2, dogImg)
 
 const monkey = new Monkey([{ x: 800, y: 50}], 2, 50)
 
-// const apple = new FoodItem([{ x: 750, y: 350}], 1, 100, appleImg)
-const apple = new FoodItem([{ x: 900, y: 450}], 3, 50, appleImg)
+const apple = new FoodItem([{ x: 900, y: 450}], 1, 50, appleImg)
 const blueberry = new FoodItem([{ x: 900, y: 450}], 3, 50, blueberryImg)
 
 let obstacleArr = [gorilla, sloth, parrot, narwhal, dog]

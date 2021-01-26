@@ -27,7 +27,7 @@ Basic functionality including: one type of enemy items and food items, possibili
 - Add boss enemy when a certain score is reached during the game
 - ~~Add pause option~~
 
-![gamepause](https://user-images.githubusercontent.com/61108220/105712020-94311d80-5f19-11eb-9d02-f2e229f048d6.png)
+![gamepause](https://user-images.githubusercontent.com/61108220/105881014-4e04b880-6004-11eb-8c5a-2458158e7438.png)
 
 ## Data Sructure
 

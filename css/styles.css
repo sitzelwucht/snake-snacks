@@ -8,6 +8,7 @@ html {
     background-repeat: no-repeat;
     background-position: center center;
     min-height: 100%;
+    font-family: 'Potta One';
     max-width: 100%;
 }
 h1 {
@@ -108,7 +109,36 @@ span {
 }
 #game {
     margin: 0 auto;
-    transition: all 1.3s ease-in-out
+    display: flex;
+    flex-direction: row;
+    transition: all 1.3s ease-in-out;
+}
+
+#symbols {
+    margin-left: 1em;
+}
+#symbols span {
+    opacity: .8;
+    color: rgb(20,20,20);
+    font-family: monospace
+}
+#symbols img {
+    height: 30px;
+}
+#symbols img {
+    opacity: .6;
+}
+#symbols img:hover {
+    opacity: 1;
+}
+.symbol {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.equal {
+    width: 8px;
+    height: 6px!important;
 }
 #canvas {
     margin-right: auto;
@@ -181,4 +211,5 @@ button:hover {
 }
 .shrink {
     transform: scale(.6);
+    margin: 0 auto;
 }
