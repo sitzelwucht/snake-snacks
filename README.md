@@ -15,7 +15,7 @@ When this occurs, the game ends and a gameover screen is shown with 2 different 
 
 ![gamescreen](https://user-images.githubusercontent.com/61108220/105641666-99dd2380-5e85-11eb-8598-5c6991d86bc0.png)
 
-## MPV
+## MVP
 
 Basic functionality including: one type of enemy items and food items, possibility to score points and lose game.
 
@@ -26,6 +26,8 @@ Basic functionality including: one type of enemy items and food items, possibili
 - Add option to enter your name and save score to leaderboard and save it to localstorage
 - Add boss enemy when a certain score is reached during the game
 - ~~Add pause option~~
+
+![gamepause](https://user-images.githubusercontent.com/61108220/105712020-94311d80-5f19-11eb-9d02-f2e229f048d6.png)
 
 ## Data Sructure
 
@@ -57,6 +59,7 @@ Basic functionality including: one type of enemy items and food items, possibili
 - Game screen
 - End screen
 
+![endscreen](https://user-images.githubusercontent.com/61108220/105710391-57642700-5f17-11eb-81c3-907c89113b07.png)
 
 
 
