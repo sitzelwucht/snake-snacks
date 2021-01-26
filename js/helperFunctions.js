@@ -33,7 +33,11 @@ function handleKeypress() {
         else if (event.keyCode == 32 || event.key == 'Space') {
             pause == false ? pause = true : pause = false
             if (pause) {
-                clearInterval(intervalID)
+                // timeout to allow pause message to be rendered first
+                setTimeout(() => {
+                    clearInterval(intervalID)
+                }, 50)
+                
             }
             else {
                 intervalID = setInterval(() => {

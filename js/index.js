@@ -24,7 +24,7 @@ function draw() {
     ctx.font = '20px monospace'
     ctx.fillStyle = 'white'
     ctx.fillText('Score: '+ snake.points, 35, 580)
-    ctx.fillText('Health:', 780, 580)
+    ctx.fillText('Health:', 800, 580)
 
     // render health symbols
     for(let i = 0; i < snake.health; i++) {
