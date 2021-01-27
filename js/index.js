@@ -20,7 +20,6 @@ document.querySelector('#replay').addEventListener('click', () => {
 document.querySelector('#submit-score').addEventListener('click', (e) => {
     e.preventDefault()
     submitScore()
-    displayScores()
 })
 // MAIN DRAW FUNCTION
 
@@ -104,28 +103,38 @@ function clearGame() {
     apple.coords = [{ x: 750, y: 390 }]
     blueberry.coords = [{ x: 900, y: 400 }]
     ctx.clearRect(0, 0, canvas.width, canvas.height)
+    document.querySelector('form').classList.remove('hidden')
+    scoreList.classList.add('hidden')
     document.querySelector('#end').classList.add('hidden') 
 }
 
 function submitScore() {
-    let name = document.querySelector('#name').value
+    let name = document.querySelector('#name')
     let scoreItem = {
-        name: name,
+        name: name.value,
         score: snake.points
     }
     storageArr.push(scoreItem)
     localStorage.setItem('scoreboard', JSON.stringify(storageArr))
+    name.value = ''
+    displayScores()
 }
 
 function displayScores() {
     document.querySelector('form').classList.add('hidden')
-    let sorted = storageArr.sort((a, b) => (a.score < b.score) ? 1 : (a.score === b.score) ? ((a.score > b.score) ? 1 : -1) : -1)
-    var sorted10 = sorted.splice(0, 10)
+    let sorted = storageArr.sort((a, b) => {
+        if (a.score < b.score) return 1
+        else if (a.score > b.score)
+        return -1
+        else return 0
+    })
+
+    let sorted10 = sorted.length > 10 ? sorted.splice(0, 10) : sorted
 
      sorted10.forEach(item => {
         let li = document.createElement('li')
         li.innerHTML = `${item.name}: ${item.score}`
         scoreList.appendChild(li)
     })
- 
+    scoreList.classList.remove('hidden')
 }
