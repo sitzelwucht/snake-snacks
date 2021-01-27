@@ -121,6 +121,7 @@ function submitScore() {
 }
 
 function displayScores() {
+    scoreList.innerHTML = ''
     document.querySelector('form').classList.add('hidden')
     let sorted = storageArr.sort((a, b) => {
         if (a.score < b.score) return 1
@@ -131,10 +132,14 @@ function displayScores() {
 
     let sorted10 = sorted.length > 10 ? sorted.splice(0, 10) : sorted
 
-     sorted10.forEach(item => {
+    for (let i = 0; i < sorted10.length; i++) {
         let li = document.createElement('li')
-        li.innerHTML = `${item.name}: ${item.score}`
+        li.innerHTML = `${sorted10[i].name}: ${sorted10[i].score}`
         scoreList.appendChild(li)
-    })
+        if(i % 2 == 0) {
+            li.classList.add('dark-bg')
+        }
+    }
+
     scoreList.classList.remove('hidden')
 }

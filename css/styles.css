@@ -200,7 +200,12 @@ button:hover {
     background-color: white;
 }
 #submit-score {
-    background:rgb(153, 224, 125)
+    background:rgb(153, 224, 125);
+    transition: all .3s ease-in
+}
+#submit-score:hover {
+    background: rgb(20,20,20);
+    color: white
 }
 .blur {
     font-family: 'Potta One';
@@ -223,4 +228,14 @@ button:hover {
 .shrink {
     transform: scale(.6);
     margin: 0 auto;
+}
+.dark-bg {
+    background: rgba(20,20,20,.3)
+}
+li {
+    padding: .3em;
+}
+
+#score-list {
+    font-family: monospace
 }
