@@ -110,6 +110,10 @@ function clearGame() {
 
 function submitScore() {
     let name = document.querySelector('#name')
+    if(!name.value) {
+        alert('Please enter a name')
+        return
+    }
     let scoreItem = {
         name: name.value,
         score: snake.points
