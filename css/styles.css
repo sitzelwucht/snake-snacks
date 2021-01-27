@@ -39,6 +39,14 @@ h1 img {
 span {
     color: rgb(161, 205, 235)
 }
+input {
+    outline: none;
+    border: none;
+    padding: .5em;
+}
+form {
+    margin: .5em;
+}
 #wrapper {
     display: flex;
     flex-direction: column;
@@ -190,6 +198,9 @@ button {
 }
 button:hover {
     background-color: white;
+}
+#submit-score {
+    background:rgb(153, 224, 125)
 }
 .blur {
     font-family: 'Potta One';

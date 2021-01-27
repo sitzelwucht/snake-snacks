@@ -13,10 +13,10 @@
         <div>
             <img id="snake" src="./images/snake (1).png" height="400" alt="snake image">
             <div id="obstacles" class="blur">
-                <p><img src="./images/parrot.png" height="45" alt="parrot" title="parrot"><img src="./images/sloth.png" height="45" alt="sloth" title="sloth"><img src="./images/equal.png" height=""><img src="./images/warning.png" height="40" alt="mid-level warning" title="mid-level warning"></p>
-                <p><img src="./images/gorilla.png" height="45"  alt="gorilla" title="gorilla"><img src="./images/dog.png" height="45"  alt="dog" title="dog"><img src="./images/equal.png"><img src="./images/danger.png" height="40" alt="high-level danger" title="high-level danger"></p>
-                <p><img src="./images/narwhal.png" height="45"  alt="narwhal" title="narwhal"><img src="./images/equal.png"><img src="./images/extreme.png" height="40" alt="fatal" title="fatal"></p>
-                <p><img src="./images/monkey.png" height="40"  alt="monkey" title="monkey"><img src="./images/equal.png"><img src="./images/question.png" height="40" alt="surprise" title="surprise"></p>
+                <p class="symbol"><img src="./images/parrot.png" height="45" alt="parrot" title="parrot"><img src="./images/sloth.png" height="45" alt="sloth" title="sloth"><img src="./images/equal.png" height=""><img src="./images/warning.png" height="40" alt="mid-level warning" title="mid-level warning"></p>
+                <p class="symbol"><img src="./images/gorilla.png" height="45"  alt="gorilla" title="gorilla"><img src="./images/dog.png" height="45"  alt="dog" title="dog"><img src="./images/equal.png"><img src="./images/danger.png" height="40" alt="high-level danger" title="high-level danger"></p>
+                <p class="symbol"><img src="./images/narwhal.png" height="45"  alt="narwhal" title="narwhal"><img src="./images/equal.png"><img src="./images/extreme.png" height="40" alt="fatal" title="fatal"></p>
+                <p class="symbol"><img src="./images/monkey.png" height="40"  alt="monkey" title="monkey"><img src="./images/equal.png"><img src="./images/question.png" height="40" alt="surprise" title="surprise"></p>
             </div>
         </div>
 
@@ -52,6 +52,13 @@
             <p>GAME OVER</p>
             <p>Score:</p>
             <p id="final-score"></p>
+            <form>
+               
+                <label for="name">Name:</label>
+                <input type="text" id="name">
+                <button id="submit-score">Submit</button>
+            </form>
+            <ol id="score-list"></ol>
             <div>
                 <p><button id="replay">Play Again</button></p>
                 <p>

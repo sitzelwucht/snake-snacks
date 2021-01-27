@@ -6,6 +6,9 @@ let startScreen = document.querySelector('#startscreen')
 let game = document.querySelector('#game')
 let end = document.querySelector('#end')
 let score = document.querySelector('#final-score')
+let scoreList = document.querySelector('#score-list')
+let storageArr = localStorage.getItem('scoreboard') ? 
+JSON.parse(localStorage.getItem('scoreboard')) : []
 
 let isDown = false
 let isUp = false

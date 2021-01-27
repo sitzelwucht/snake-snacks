@@ -17,6 +17,11 @@ document.querySelector('#replay').addEventListener('click', () => {
     startGame()
 })
 
+document.querySelector('#submit-score').addEventListener('click', (e) => {
+    e.preventDefault()
+    submitScore()
+    displayScores()
+})
 // MAIN DRAW FUNCTION
 
 function draw() {
@@ -100,4 +105,27 @@ function clearGame() {
     blueberry.coords = [{ x: 900, y: 400 }]
     ctx.clearRect(0, 0, canvas.width, canvas.height)
     document.querySelector('#end').classList.add('hidden') 
+}
+
+function submitScore() {
+    let name = document.querySelector('#name').value
+    let scoreItem = {
+        name: name,
+        score: snake.points
+    }
+    storageArr.push(scoreItem)
+    localStorage.setItem('scoreboard', JSON.stringify(storageArr))
+}
+
+function displayScores() {
+    document.querySelector('form').classList.add('hidden')
+    let sorted = storageArr.sort((a, b) => (a.score < b.score) ? 1 : (a.score === b.score) ? ((a.score > b.score) ? 1 : -1) : -1)
+    var sorted10 = sorted.splice(0, 10)
+
+     sorted10.forEach(item => {
+        let li = document.createElement('li')
+        li.innerHTML = `${item.name}: ${item.score}`
+        scoreList.appendChild(li)
+    })
+ 
 }
