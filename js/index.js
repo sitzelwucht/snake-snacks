@@ -140,6 +140,5 @@ function displayScores() {
             li.classList.add('dark-bg')
         }
     }
-
     scoreList.classList.remove('hidden')
 }

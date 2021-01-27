@@ -13,7 +13,7 @@ The player controls a snake character using the 4 arrow keys of the keyboard. Pr
 Correspondingly, for each snack, points are awarded depending on the snack. The objective is to get as many points as possible before the health count goes down to 0.
 When this occurs, the game ends and a gameover screen is shown. The player can enter their name, and a leaderboard is shown with the 10 highest scores.
 
-![gamescreen](https://user-images.githubusercontent.com/61108220/105641666-99dd2380-5e85-11eb-8598-5c6991d86bc0.png)
+![gamepause](https://user-images.githubusercontent.com/61108220/105881014-4e04b880-6004-11eb-8c5a-2458158e7438.png)
 
 ## MVP
 
@@ -27,7 +27,7 @@ Basic functionality including: one type of enemy items and food items, possibili
 - Add boss enemy when a certain score is reached during the game
 - ~~Add pause option~~
 
-![gamepause](https://user-images.githubusercontent.com/61108220/105881014-4e04b880-6004-11eb-8c5a-2458158e7438.png)
+![scoreboard](https://user-images.githubusercontent.com/61108220/105999581-28cc8480-60ae-11eb-917b-23a2467f3032.png)
 
 ## Data Sructure
 
@@ -59,7 +59,7 @@ Basic functionality including: one type of enemy items and food items, possibili
 - Game screen
 - End screen
 
-![scoreboard](https://user-images.githubusercontent.com/61108220/105982634-d3857880-6097-11eb-86b4-494c7ef1a1f6.png)
+
 
 
 
