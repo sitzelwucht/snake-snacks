@@ -236,5 +236,7 @@ li {
     padding: .3em;
 }
 #score-list {
-    font-family: monospace
+    font-family: monospace;
+    text-align: left;
+    list-style-position: inside;
 }
