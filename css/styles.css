@@ -240,3 +240,20 @@ li {
     text-align: left;
     list-style-position: inside;
 }
+footer {
+    color: rgb(92, 109, 119);
+    position: absolute;
+    bottom: .5em;
+    margin: .6em;
+    font-family: monospace;
+    font-size: 1.1em;
+}
+footer a {
+    text-decoration: none;
+    color: rgb(88, 124, 99);
+}
+footer a:hover {
+    color: rgb(82, 51, 153);
+}
+
+
