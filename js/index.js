@@ -109,18 +109,17 @@ function clearGame() {
 }
 
 function submitScore() {
-    let name = document.querySelector('#name')
-    if(!name.value) {
+    if(!playerName.value) {
         alert('Please enter a name')
         return
     }
     let scoreItem = {
-        name: name.value,
+        name: playerName.value,
         score: snake.points
     }
     storageArr.push(scoreItem)
     localStorage.setItem('scoreboard', JSON.stringify(storageArr))
-    name.value = ''
+    playerName.value = ''
     displayScores()
 }
 

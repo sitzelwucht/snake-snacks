@@ -99,4 +99,7 @@ function endScreen() {
     end.classList.remove('fade')
 }
 
+function focusName() {
+    playerName.focus()
+}
 

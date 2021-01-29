@@ -6,6 +6,7 @@ let startScreen = document.querySelector('#startscreen')
 let game = document.querySelector('#game')
 let end = document.querySelector('#end')
 let score = document.querySelector('#final-score')
+let playerName = document.querySelector('#name')
 let scoreList = document.querySelector('#score-list')
 let storageArr = localStorage.getItem('scoreboard') ? 
 JSON.parse(localStorage.getItem('scoreboard')) : []
