@@ -59,7 +59,9 @@ Basic functionality including: one type of enemy items and food items, possibili
 - Game screen
 - End screen
 
+## Links
 
+- [Deployment](https://sitzelwucht.github.io/snake-snacks/)
 
 
 
